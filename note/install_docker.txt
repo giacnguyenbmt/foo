@@ -1,3 +1,6 @@
+export http_proxy=http://10.61.57.22:3128
+export https_proxy=http://10.61.57.22:3128
+
 rm /etc/apt/sources.list.d/cuda.list \
     && rm /etc/apt/sources.list.d/nvidia-ml.list \
     && apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub \
