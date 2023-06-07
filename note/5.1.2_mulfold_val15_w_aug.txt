@@ -1,0 +1,228 @@
+python main.py -m train -c configs/lprnetv5.1.2_24x188.yml -o Train.dataset.real_dir=/code/vn-lp-generator/output/mulfold_v1_val_vht_1row_dev/ Train.dataset.synth_dir= Eval.datase
+t.real_dir=/code/data/vht_vn_real_1row_lp_total/ Train.dataset.transforms.use_augmentation=True
+Architecture:
+  class_num: 34
+  dropout_rate: 0.5
+  name: LPRNetEnhanceV20
+Eval:
+  dataset:
+    label_file_list: null
+    name: VHTHNCDataset
+    real_dir: /code/data/vht_vn_real_1row_lp_total/
+    synth_dir: null
+    transforms:
+      img_size:
+      - 188
+      - 24
+      use_normalization: true
+  loader:
+    batch_size_per_card: 128
+    drop_last: false
+    num_workers: 20
+    shuffle: false
+Global:
+  blank_first: false
+  blank_idx: 33
+  cal_metric_during_train: true
+  character_dict_path: null
+  chars: "0123456789ABCD\u0110EFGHKLMNPQRSTUVXYZ "
+  checkpoints: null
+  epoch_num: 300
+  eval_epoch_step: 1
+  infer_img: null
+  max_text_length: 10
+  phase: train
+  pretrained_model: null
+  print_batch_step: 20
+  save_epoch_step: 2
+  save_inference_dir: null
+  save_model_dir: output/lprnetv5.1.2_24x188
+  save_res_path: ./output/rec/pred.txt
+  use_gpu: true
+Optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  lr:
+    learning_rate: 0.001
+    name: CosineLR
+    warmup_epoch: 5
+  name: Adam
+  regularizer:
+    factor: 3.0e-05
+    name: L2
+PostProcess:
+  name: CTCLabelDecode
+  t_length: 18
+Train:
+  dataset:
+    label_file_list: null
+    name: VHTHNCDataset
+    real_dir: /code/vn-lp-generator/output/mulfold_v1_val_vht_1row_dev/
+    synth_dir: null
+    transforms:
+      img_size:
+      - 188
+      - 24
+      use_augmentation: true
+      use_normalization: true
+  loader:
+    batch_size_per_card: 128
+    drop_last: true
+    num_workers: 20
+    shuffle: true
+
+Train mode
+Successful to build network!
+Initial net weights successful!
+***************************************
+Real data: 150000
+***************************************
+Real data: 4274
+training...
+Epoch 1/300
+train loss: 23.708, steps: 1171, time: 38.9s, learning rate: 0.00001
+val loss: 21.77162, plate accuracy: 0.004 (17-4274)
+Epoch 2/300
+train loss: 9.411, steps: 2342, time: 37.5s, learning rate: 0.00021
+val loss: 17.55579, plate accuracy: 0.130 (557-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch2_loss_9.411.pth
+Epoch 3/300
+train loss: 6.755, steps: 3513, time: 36.9s, learning rate: 0.00041
+val loss: 18.45189, plate accuracy: 0.127 (543-4274)
+Epoch 4/300
+train loss: 5.920, steps: 4684, time: 37.9s, learning rate: 0.00060
+val loss: 18.14788, plate accuracy: 0.193 (824-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch4_loss_5.920.pth
+Epoch 5/300
+train loss: 5.654, steps: 5855, time: 37.8s, learning rate: 0.00080
+val loss: 18.43730, plate accuracy: 0.213 (911-4274)
+Epoch 6/300
+train loss: 4.657, steps: 7026, time: 36.9s, learning rate: 0.00100
+val loss: 19.11808, plate accuracy: 0.207 (883-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch6_loss_4.657.pth
+Epoch 7/300
+train loss: 4.493, steps: 8197, time: 37.8s, learning rate: 0.00100
+val loss: 18.49629, plate accuracy: 0.219 (935-4274)
+Epoch 8/300
+train loss: 4.261, steps: 9368, time: 37.8s, learning rate: 0.00100
+val loss: 18.23206, plate accuracy: 0.245 (1045-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch8_loss_4.261.pth
+Epoch 9/300
+train loss: 3.881, steps: 10539, time: 37.0s, learning rate: 0.00100
+val loss: 17.43490, plate accuracy: 0.264 (1130-4274)
+Epoch 10/300
+train loss: 3.485, steps: 11710, time: 37.7s, learning rate: 0.00100
+val loss: 17.61416, plate accuracy: 0.234 (1001-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch10_loss_3.485.pth
+Epoch 11/300
+train loss: 3.345, steps: 12881, time: 38.2s, learning rate: 0.00100
+val loss: 17.60961, plate accuracy: 0.241 (1032-4274)
+Epoch 12/300
+train loss: 3.213, steps: 14052, time: 37.2s, learning rate: 0.00100
+val loss: 17.24177, plate accuracy: 0.236 (1009-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch12_loss_3.213.pth
+Epoch 13/300
+train loss: 3.113, steps: 15223, time: 38.0s, learning rate: 0.00100
+val loss: 17.56446, plate accuracy: 0.242 (1035-4274)
+Epoch 14/300
+train loss: 2.986, steps: 16394, time: 37.0s, learning rate: 0.00100
+val loss: 16.12150, plate accuracy: 0.268 (1145-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch14_loss_2.986.pth
+Epoch 15/300
+train loss: 2.912, steps: 17565, time: 37.3s, learning rate: 0.00100
+val loss: 15.93754, plate accuracy: 0.250 (1070-4274)
+Epoch 16/300
+train loss: 2.848, steps: 18736, time: 38.1s, learning rate: 0.00100
+val loss: 16.41373, plate accuracy: 0.257 (1097-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch16_loss_2.848.pth
+Epoch 17/300
+train loss: 2.762, steps: 19907, time: 36.9s, learning rate: 0.00100
+val loss: 16.02280, plate accuracy: 0.264 (1130-4274)
+Epoch 18/300
+train loss: 2.706, steps: 21078, time: 37.9s, learning rate: 0.00100
+val loss: 15.32003, plate accuracy: 0.269 (1149-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch18_loss_2.706.pth
+Epoch 19/300
+train loss: 2.644, steps: 22249, time: 38.1s, learning rate: 0.00100
+val loss: 16.14737, plate accuracy: 0.270 (1154-4274)
+Epoch 20/300
+train loss: 2.586, steps: 23420, time: 37.0s, learning rate: 0.00099
+val loss: 15.71027, plate accuracy: 0.287 (1227-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch20_loss_2.586.pth
+Epoch 21/300
+train loss: 2.522, steps: 24591, time: 37.6s, learning rate: 0.00099
+val loss: 15.71351, plate accuracy: 0.272 (1161-4274)
+Epoch 22/300
+train loss: 2.473, steps: 25762, time: 38.1s, learning rate: 0.00099
+val loss: 15.71853, plate accuracy: 0.274 (1171-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch22_loss_2.473.pth
+Epoch 23/300
+train loss: 2.446, steps: 26933, time: 37.0s, learning rate: 0.00099
+val loss: 15.66261, plate accuracy: 0.279 (1193-4274)
+Epoch 24/300
+train loss: 2.408, steps: 28104, time: 37.7s, learning rate: 0.00099
+val loss: 15.72083, plate accuracy: 0.275 (1177-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch24_loss_2.408.pth
+Epoch 25/300
+train loss: 2.368, steps: 29275, time: 37.7s, learning rate: 0.00099
+val loss: 15.67149, plate accuracy: 0.277 (1185-4274)
+Epoch 26/300
+train loss: 2.323, steps: 30446, time: 37.0s, learning rate: 0.00099
+val loss: 16.13814, plate accuracy: 0.285 (1217-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch26_loss_2.323.pth
+Epoch 27/300
+train loss: 2.309, steps: 31617, time: 37.9s, learning rate: 0.00099
+val loss: 15.85645, plate accuracy: 0.284 (1212-4274)
+Epoch 28/300
+train loss: 2.257, steps: 32788, time: 37.8s, learning rate: 0.00099
+val loss: 16.14855, plate accuracy: 0.286 (1224-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch28_loss_2.257.pth
+Epoch 29/300
+train loss: 2.248, steps: 33959, time: 37.2s, learning rate: 0.00099
+val loss: 15.29463, plate accuracy: 0.305 (1302-4274)
+Epoch 30/300
+train loss: 2.209, steps: 35130, time: 37.7s, learning rate: 0.00098
+val loss: 16.06888, plate accuracy: 0.296 (1267-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch30_loss_2.209.pth
+Epoch 31/300
+train loss: 2.177, steps: 36301, time: 38.4s, learning rate: 0.00098
+val loss: 15.99386, plate accuracy: 0.277 (1183-4274)
+Epoch 32/300
+train loss: 2.161, steps: 37472, time: 37.0s, learning rate: 0.00098
+val loss: 15.69175, plate accuracy: 0.294 (1257-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch32_loss_2.161.pth
+Epoch 33/300
+train loss: 2.148, steps: 38643, time: 38.1s, learning rate: 0.00098
+val loss: 15.37783, plate accuracy: 0.290 (1241-4274)
+Epoch 34/300
+train loss: 2.125, steps: 39814, time: 37.4s, learning rate: 0.00098
+val loss: 15.85348, plate accuracy: 0.282 (1206-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch34_loss_2.125.pth
+Epoch 35/300
+train loss: 2.105, steps: 40985, time: 37.7s, learning rate: 0.00098
+val loss: 16.13868, plate accuracy: 0.287 (1227-4274)
+Epoch 36/300
+train loss: 2.080, steps: 42156, time: 37.7s, learning rate: 0.00097
+val loss: 15.67033, plate accuracy: 0.310 (1325-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch36_loss_2.080.pth
+Epoch 37/300
+train loss: 2.056, steps: 43327, time: 37.0s, learning rate: 0.00097
+val loss: 15.47374, plate accuracy: 0.301 (1287-4274)
+Epoch 38/300
+train loss: 2.062, steps: 44498, time: 37.9s, learning rate: 0.00097
+val loss: 15.63216, plate accuracy: 0.316 (1349-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch38_loss_2.062.pth
+Epoch 39/300
+train loss: 2.028, steps: 45669, time: 37.4s, learning rate: 0.00097
+val loss: 15.94102, plate accuracy: 0.292 (1247-4274)
+Epoch 40/300
+train loss: 2.035, steps: 46840, time: 38.1s, learning rate: 0.00097
+val loss: 16.04625, plate accuracy: 0.301 (1288-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch40_loss_2.035.pth
+Epoch 41/300
+train loss: 2.008, steps: 48011, time: 37.6s, learning rate: 0.00097
+val loss: 15.91697, plate accuracy: 0.311 (1331-4274)
+Epoch 42/300
+train loss: 1.986, steps: 49182, time: 37.9s, learning rate: 0.00096
+val loss: 16.24756, plate accuracy: 0.303 (1296-4274)
+checkpoint  output/lprnetv5.1.2_24x188/LPRnet_epoch42_loss_1.986.pth
