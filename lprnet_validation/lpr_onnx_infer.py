@@ -25,7 +25,7 @@ class LPR:
         self.output_names = self.session.get_outputs()[0].name
 
     def preprocess(self, image, split_ratio=1.05):
-        image = self.split_and_concate_w_ratio(image, split_ratio)
+        # image = self.split_and_concate_w_ratio(image, split_ratio)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         image = cv2.resize(image, (self.img_w, self.img_h))
         image = image.astype('float32')
