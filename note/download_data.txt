@@ -1,3 +1,6 @@
-wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/ER2hT-1Gz-xOi2sBv0q0Pz8B8Qpc1FDslPFTX8WoEI080Q?e=aBVpRe&download=1"
-wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/EY-HxAKy4WdGtGyhUXOYCQABV90ZB5VLJXcnhnaf8bSxdw?e=sKRSUr&download=1"
-wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/EZ_cbQzNYFlMlA8bWN_ExfQBcXIGvpo2SHvmkMUVOIxPTQ?e=LTkiyN&download=1"
+# tunglt46
+wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/EY0QSo6f3opDsUSPnk28bIIB0x42dMLk7F_JOUmNy5Y6JQ?e=wdqOH3&download=1"
+wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/EcwVa4w-95ZFoRWAB4wj1oUBfdXgHhuRg0OwXHpn21I8Tg?e=wQ6ox8&download=1"
+
+# minhlc3
+wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/EWRlBz28i4lIhN2VdRXX3xYBPucmpyVY9UaJrdCeUIIDPQ?e=G2rbqM&download=1"
