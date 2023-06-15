@@ -1,3 +1,7 @@
 gdown https://drive.google.com/drive/folders/1KIXe9DMt1CPlZveKpmJ3PaeJ5W2PPC22?usp=sharing --folder
 gdown --id 1-LkSvdNG3zNZkn2kKJreEKJ3sdjmsJyX
 gdown --id 1BVx2xj2GU74nrYxQYnkOEIeMWui7rgXT
+
+wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/EUPI45v3VwNLnuMfAgv4zRUBKypV1wvdpkUfUnUiTScvmg?e=gpFRBJ&download=1" -O veriwild_10colors_03_aug.zip
+wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/EZUnEzXLYMpMi42hHwwDSToBrM39NC540qtzZf_ihJpSNg?e=f0F7kx&download=1" -O 
+eval.zip
