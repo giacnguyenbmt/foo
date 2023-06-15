@@ -1,1 +1,3 @@
 gdown https://drive.google.com/drive/folders/1KIXe9DMt1CPlZveKpmJ3PaeJ5W2PPC22?usp=sharing --folder
+gdown --id 1-LkSvdNG3zNZkn2kKJreEKJ3sdjmsJyX
+gdown --id 1BVx2xj2GU74nrYxQYnkOEIeMWui7rgXT
