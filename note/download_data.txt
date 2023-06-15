@@ -1,2 +1,4 @@
 wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/ES9cGHt9LyVAknUohopy17MBTTOGqquu2P1anKhKjf-Vbg?e=lX1nqN&download=1" -O train_ver1_1row.zip
 wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/EephOHyL7glCozXyaCQweroBB7XY2T9KLNhIblGTkv8l_w?e=jjRlVY&download=1" -O train_ver1_1row_vht.zip
+https://drive.google.com/drive/folders/1uIqB6_VQkMJPc154N5tyNuL_CTmbACBv?usp=drive_link
+gdown https://drive.google.com/drive/folders/1uIqB6_VQkMJPc154N5tyNuL_CTmbACBv?usp=drive_link --folder
