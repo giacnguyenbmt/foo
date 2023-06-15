@@ -1,1 +1,1 @@
-wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/EZzKzGgXRYZGpaaIYEleUOUBUIT5x_L9Sui_CbvcXI3m1A?e=ItkWgP&download=1"
+wget -4 "https://uithcm-my.sharepoint.com/:u:/g/personal/18521162_ms_uit_edu_vn/ES9cGHt9LyVAknUohopy17MBTTOGqquu2P1anKhKjf-Vbg?e=lX1nqN&download=1" -O train_ver1_1row.zip
