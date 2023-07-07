@@ -1,1 +1,4 @@
-
+python main.py -m train -c configs/lprnetv5.1.2_24x188.yml -o \
+    Train.dataset.real_dir=/data/lpr_vht_hnc_v4/train \
+    Train.dataset.synth_dir=/data/lpr_vht_hnc_v4/synth \
+    Eval.dataset.real_dir=/data/lpr_vht_hnc_v4/validate
